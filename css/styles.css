@@ -482,6 +482,11 @@ body {
     line-height: 1.7;
 }
 
+.footer__link:hover,
+.footer__link:focus {
+ color: var(--accent-color);
+}
+
 .join-us {
     width: 231px;
     margin-left: 70px;
