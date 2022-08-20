@@ -22,15 +22,13 @@ h1, h2, h3, h4, p {   margin-top: 0;   margin-bottom: 0; }  ul, ol {   margin-to
 
 html {
     box-sizing: border-box;
-}
-  
+} 
 
   *,
   *::before,
   *::after {
     box-sizing: inherit;
-}
-  
+}  
 
 body {
     color: var(--title-text-color);
@@ -253,7 +251,7 @@ body {
 }
 
 .grid__item {
-    width: calc((100% - 3*30px)/4);
+    width: 270px;
     margin-right: 30px;
 }
 
@@ -276,6 +274,15 @@ body {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.7;
+}
+
+.thumb {
+    display: flex;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+    background-color: var(--background-grey-color);
 }
 
 /* Specialization section */
@@ -355,7 +362,7 @@ body {
     justify-content: center;
     margin-top: 16px;
 }
-.cards_icon {
+.cards__link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -369,7 +376,8 @@ body {
 }
     
 
-.cards_icon:hover {
+.cards__link:hover,
+.cards__link:focus {
     background-color: var(--accent-color);
 }
 
@@ -377,8 +385,8 @@ body {
     fill: #afb1b8;
 }
 
-.cards_icon:hover .icon_cards,
-.cards_icon:focus .icon_cards {
+.cards__link:hover .icon_cards,
+.cards__link:focus .icon_cards {
     fill: #FFFFFF;
 }
 
@@ -393,7 +401,7 @@ body {
     justify-content: space-between;
 }
 
-.clients__item {
+.clients__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -402,15 +410,15 @@ body {
     border: 1px solid #AFB1B8;
     border-radius: 4px;
 }
-
-.clients__item:hover,
-.clients__item:focus {
+.clients__link:hover,
+.clients__link:focus {
     border-color: var(--accent-color);
+    fill: var(--accent-color);
 }
 
 .clients__link:hover .clients__icon,
 .clients__link:focus .clients__icon {
-    fill: var(--accent-color);
+    fill: inherit;
 }
 
 .clients__icon {
@@ -563,6 +571,11 @@ body {
     border: 1px solid #EEEEEE;
 }
 
+.portfolio-list__item:hover,
+.portfolio-list__item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .portfolio-list__item:nth-child(3n) {
     margin-right: 0;
 }
@@ -591,7 +604,7 @@ body {
 
 .portfolio-list__text {
     margin-top: 4px;
-    color: inherit;
+    color: var(--primary-text-color);
     font-weight: 400;
     font-size: 16px;
     line-height: 1.9;
